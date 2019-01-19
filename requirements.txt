@@ -1,0 +1,3 @@
+thumbor>=2.7.0
+opencv-engine
+thumbor-greenthumb-filter
