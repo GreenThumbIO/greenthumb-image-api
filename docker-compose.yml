@@ -2,7 +2,7 @@ version: '3'
 services:
   web:
     build: .
-    command: thumbor -p 3030 -c thumbor.conf
+    command: ./greenthumbor.sh
     volumes:
       - .:/greenthumb-image-api
     ports:
