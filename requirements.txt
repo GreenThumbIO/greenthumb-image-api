@@ -3,4 +3,4 @@ numpy
 opencv-engine
 Pillow
 thumbor
-thumbor-greenthumb-filter==0.0.5
+thumbor-greenthumb-filter==0.0.6
