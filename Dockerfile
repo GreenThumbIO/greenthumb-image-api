@@ -1,4 +1,4 @@
-FROM sugyan/heroku-python-opencv
+FROM spmallick/opencv-docker:opencv
 RUN mkdir /greenthumb-image-api
 WORKDIR /greenthumb-image-api
 COPY requirements.txt /greenthumb-image-api/requirements.txt
