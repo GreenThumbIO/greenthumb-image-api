@@ -10,7 +10,7 @@
 ## Run the containers
 `docker-compose up`
 
-## Camera Calibration
+## Camera/Test Image Calibration
 ### HSV Range Detector Calibration
 ```
 open -a XQuartz
