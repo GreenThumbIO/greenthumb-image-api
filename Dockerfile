@@ -1,11 +1,10 @@
-FROM spmallick/opencv-docker:opencv
+FROM sugyan/heroku-python-opencv
 RUN mkdir /greenthumb-image-api
 WORKDIR /greenthumb-image-api
-COPY requirements.txt /greenthumb-image-api/requirements.txt
 COPY thumbor.conf /greenthumb-image-api/thumbor.conf
-
-RUN apt-get update -qq
-RUN apt-get install -y libcurl4-openssl-dev libssl-dev
-
+COPY requirements.txt /greenthumb-image-api/requirements.txt
 RUN pip install -r requirements.txt
-CMD thumbor -p $PORT -c /greenthumb-image-api/thumbor.conf
+ENV PYTHONPATH "/app/.heroku/opencv/lib/python2.7/site-packages"
+COPY docker-entrypoint.sh /
+ENTRYPOINT ["/docker-entrypoint.sh"]
+CMD ["thumbor"]

@@ -1,6 +1,3 @@
-opencv-python
-numpy
+thumbor>=2.7.0
 opencv-engine
-Pillow
-thumbor
-thumbor-greenthumb-filter==0.0.6
+thumbor-greenthumb-filter==0.0.7

@@ -2,9 +2,10 @@ version: '3'
 services:
   web:
     build: .
-    command: ./greenthumbor.sh
+    environment:
+      PYTHONPATH: /app/.heroku/opencv/lib/python2.7/site-packages
+      PORT: ${PORT:-3000}
     volumes:
       - .:/greenthumb-image-api
-      - ../thumbor-greenthumb-filter:/thumbor-greenthumb-filter
     ports:
-      - "3030:3030"
+      - "3033:${PORT:-3000}"
