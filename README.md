@@ -1,5 +1,3 @@
-# README
-
 ## DEPENDENCIES
 
 ### Install Docker Compose
